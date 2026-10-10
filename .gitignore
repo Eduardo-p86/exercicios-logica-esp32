@@ -1,0 +1,16 @@
+# PlatformIO
+.pio/
+.vscode/.browse.c*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+
+# Arduino IDE
+build/
+*.hex
+*.elf
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
