@@ -14,7 +14,7 @@ Repositório dedicado à prática de lógica de programação com ESP32, Arduino
 
 - [x] [Dois LEDs com tempos diferentes](./01-leds-millis/README.md)
 - [x] [Contador de cliques e LCD](./02-contador-cliques/README.md)
-- [ ] [Seletor de modos com LEDs](./03-seletor-modos/README.md)
+- [x] [Seletor de modos com LEDs](./03-seletor-modos/README.md)
 - [ ] [Barra de nível de 0 a 10](./04-barra-nivel/README.md)
 - [ ] [Cronômetro com pausa](./05-cronometro/README.md)
 - [ ] [Teste de tempo de reação](./06-teste-reacao/README.md)
