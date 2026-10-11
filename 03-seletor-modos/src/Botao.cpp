@@ -1,6 +1,8 @@
 #include "Botao.h"
 
-Botao::Botao(uint8_t pino) : pinoBotao(pino), estadoAtualBotao(HIGH), estadoAnteriorBotao(HIGH), contadorCliques(0)
+unsigned int Botao::contadorCliques = 0;
+
+Botao::Botao(uint8_t pino) : pinoBotao(pino), estadoAtualBotao(HIGH), estadoAnteriorBotao(HIGH)
 {
 }
 
@@ -36,7 +38,7 @@ bool Botao::soltou()
     return estadoAtualBotao == HIGH && estadoAnteriorBotao == LOW;
 }
 
-bool Botao::click()
+bool Botao::clickMais()
 {
     atualizar();
 
@@ -49,9 +51,30 @@ bool Botao::click()
     return false;
 }
 
-unsigned int Botao::getContador() const
+bool Botao::clickMenos()
+{
+    atualizar();
+
+    if (pressionou())
+    {
+        if (contadorCliques > 0)
+        {
+            contadorCliques--;
+        }
+        return true;
+    }
+
+    return false;
+}
+
+unsigned int Botao::getContador()
 {
     return contadorCliques;
+}
+
+void Botao::resetContador()
+{
+    contadorCliques = 0;
 }
 
 void Botao::iniciar()

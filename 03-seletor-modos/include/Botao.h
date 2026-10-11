@@ -7,7 +7,7 @@ private:
     uint8_t pinoBotao;
     bool estadoAtualBotao = HIGH;
     bool estadoAnteriorBotao = HIGH;
-    unsigned int contadorCliques = 0;
+    static unsigned int contadorCliques;
 
 public:
     Botao(uint8_t pino);
@@ -16,8 +16,10 @@ public:
     bool atualizar();
     bool pressionou();
     bool soltou();
-    bool click();
-    unsigned int getContador() const;
+    bool clickMais();
+    bool clickMenos();
+    static unsigned int getContador();
+    static void resetContador();
 };
 
 #endif
