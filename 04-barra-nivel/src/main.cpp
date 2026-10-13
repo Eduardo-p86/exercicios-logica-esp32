@@ -1,18 +1,16 @@
 #include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
-
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+#include "func.cpp"
+void setup()
+{
+    inicializar();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+void loop()
+{
+    botaoA.atualizar();
+    botaoB.atualizar();
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    nivelLeds();
+    atualizarLeds();
+    atualizarLCD();
 }
